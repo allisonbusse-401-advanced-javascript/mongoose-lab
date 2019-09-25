@@ -46,7 +46,7 @@ describe('mountains api', () => {
       .then(() => {
         return request
           .get('/api/mountains')
-          .expect(200)
+          .expect(200);
       })
       .then(({ body }) => {
         expect(body.length).toBe(3);
@@ -72,7 +72,7 @@ describe('mountains api', () => {
         return request
           .put(`/api/mountains/${mountain._id}`)
           .send(mountain)
-          .expect(200)
+          .expect(200);
       })
       .then(({ body }) => {
         expect(body.tallest).toBe(true);
@@ -95,4 +95,4 @@ describe('mountains api', () => {
           });
       });
   });
-})
+});

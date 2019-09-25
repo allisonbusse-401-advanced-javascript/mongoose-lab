@@ -6,4 +6,6 @@ branches:
     - master
 script:
   - npm test
+services:
+  - mongodb
 
